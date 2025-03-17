@@ -19,7 +19,7 @@ export const ContactSection = () => {
                 Lets create something amazing together
               </h2>
               <p className="text-sm mt-2 md:text-base">
-                ready to bring your next project to life? let's connect and
+                ready to bring your next project to life? let&apos;s connect and
                 discuss how I can help you achieve your goals.
               </p>
             </div>
