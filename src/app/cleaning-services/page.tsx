@@ -1,13 +1,14 @@
 "use client";
 
-export const dynamic = "force-dynamic";
+export const dynamicMode = "force-dynamic";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import dynamic from "next/dynamic";
 import cleaningAnimation from "@/assets/images/Cleaning.json";
 import c1 from "@/assets/images/c1.json";
 import c2 from "@/assets/images/c2.json";
@@ -19,7 +20,7 @@ import c7 from "@/assets/images/c7.json";
 import c8 from "@/assets/images/c8.json";
 import c9 from "@/assets/images/c9.json";
 import c10 from "@/assets/images/c10.json";
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import { useState, useEffect } from "react";
 
 // cleaningAnimation => c1 basic cleaning

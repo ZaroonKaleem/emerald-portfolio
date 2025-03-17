@@ -1,6 +1,6 @@
 "use client";
 
-export const dynamic = "force-dynamic";
+export const dynamicMode = "force-dynamic";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -8,9 +8,12 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+// import dynamic from "next/dynamic";
 import softwareAnimation from "@/assets/images/Software.json";
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 
 const portfolioProjects = [
     {
