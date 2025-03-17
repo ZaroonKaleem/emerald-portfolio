@@ -1,6 +1,6 @@
 "use client";
 
-export const dynamic = "force-dynamic";
+export const dynamicMode = "force-dynamic";
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
