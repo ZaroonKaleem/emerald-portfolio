@@ -1,8 +1,7 @@
 "use client";
 
-import dynamic from "next/dynamic";
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 export const dynamic = "force-dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
