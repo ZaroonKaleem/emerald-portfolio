@@ -1,6 +1,6 @@
 "use client";
 
-export const dynamicMode = "force-dynamic";
+// export const dynamicMode = "force-dynamic";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
