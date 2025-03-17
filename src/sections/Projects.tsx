@@ -119,7 +119,7 @@ import { Card } from "@/components/Card";
 import { useEffect, useState } from "react";
 
 // Import animations
-import softwareAnimation from "@/assets/images/software.json";
+import softwareAnimation from "@/assets/images/Software.json";
 import securityAnimation from "@/assets/images/Security.json";
 import cleaningAnimation from "@/assets/images/Cleaning.json";
 
