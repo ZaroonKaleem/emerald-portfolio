@@ -136,7 +136,7 @@ const portfolioProjects = [
       { title: "System Integration" },
     ],
     animation: softwareAnimation,
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "/software-services",
   },
   {
     company: "Security Services",
@@ -147,7 +147,7 @@ const portfolioProjects = [
       { title: "Event & Corporate Security" },
     ],
     animation: securityAnimation,
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "/security-services",
   },
   {
     company: "Cleaning Services",
@@ -158,7 +158,7 @@ const portfolioProjects = [
       { title: "Post-Construction & Industrial Cleaning" },
     ],
     animation: cleaningAnimation,
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "/cleaning-services",
   },
 ];
 
@@ -170,7 +170,7 @@ export const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="services" className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Our Expertise"

@@ -9,12 +9,13 @@
 //   </div>;
 // };
 
-'use client';
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Sterniz from "@/assets/images/Sterniz-bg.png";
+import Link from "next/link";
 
 export const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -26,14 +27,20 @@ export const Header = () => {
       <div className="flex justify-between items-center bg-white/10 backdrop-blur border border-white/15 rounded-full p-3">
         {/* Logo */}
         <div className="text-white text-xl font-bold">
-          <Image src={Sterniz} alt="Logo" className="h-auto w-[150px] sm:w-[180px] md:w-[200px]" />
+          <a href="/">
+            <Image
+              src={Sterniz}
+              alt="Logo"
+              className="h-auto w-[150px] sm:w-[180px] md:w-[200px]"
+            />
+          </a>
         </div>
 
         {/* Desktop Navigation */}
-        
+
         <nav className="hidden lg:flex gap-6">
-           {/* Services Dropdown */}
-           <div className="relative">
+          {/* Services Dropdown */}
+          <div className="relative">
             <button
               className="nav-item"
               onMouseEnter={() => setIsServicesOpen(true)}
@@ -47,8 +54,13 @@ export const Header = () => {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <a href="#" className="block px-4 py-2 hover:text-black hover:bg-gray-100 ">Software Solutions</a>
-                
+                {/* <a href="#" className="block px-4 py-2 hover:text-black hover:bg-gray-100 ">Software Solutions</a> */}
+                <Link
+                  href="/software-services"
+                  className="block px-4 py-2 hover:bg-gray-200 hover:text-black"
+                >
+                  Software Solutions
+                </Link>
                 {/* Facility Management Sub-dropdown */}
                 <div className="relative">
                   <button
@@ -64,21 +76,41 @@ export const Header = () => {
                       onMouseEnter={() => setIsFacilityOpen(true)}
                       onMouseLeave={() => setIsFacilityOpen(false)}
                     >
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Cleaning Services</a>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Security Services</a>
+                      {/* <a href="#" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Cleaning Services</a> */}
+                      {/* <a href="#" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Security Services</a> */}
+                      <Link
+                        href="/cleaning-services"
+                        className="block px-4 py-2 hover:bg-gray-200 hover:text-black"
+                      >
+                        Cleaning Services
+                      </Link>
+                      <Link
+                        href="/security-services"
+                        className="block px-4 py-2 hover:bg-gray-200 hover:text-black"
+                      >
+                        Security Services
+                      </Link>
                     </div>
                   )}
                 </div>
               </div>
             )}
           </div>
-          <a href="#" className="nav-item">About</a>
-          <a href="#" className="nav-item">Contact</a>
-          <a href="#" className="nav-item">Jobs</a>
-          <a href="#" className="nav-item">Academy</a>
-          <a href="#" className="nav-item">Career</a>
-
-         
+          <a href="#about" className="nav-item">
+            About
+          </a>
+          <a href="#contact" className="nav-item">
+            Contact
+          </a>
+          <a href="#" className="nav-item">
+            Jobs
+          </a>
+          <a href="#" className="nav-item">
+            Academy
+          </a>
+          <a href="#" className="nav-item">
+            Career
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -93,11 +125,21 @@ export const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-16 left-0 w-full bg-white/10 backdrop-blur border border-white/15 rounded-lg p-4">
-          <a href="#" className="block py-2 text-white">About</a>
-          <a href="#" className="block py-2 text-white">Contact</a>
-          <a href="#" className="block py-2 text-white">Career</a>
-          <a href="#" className="block py-2 text-white">Jobs</a>
-          <a href="#" className="block py-2 text-white">Academy</a>
+          <a href="#about" className="block py-2 text-white">
+            About
+          </a>
+          <a href="#" className="block py-2 text-white">
+            Contact
+          </a>
+          <a href="#" className="block py-2 text-white">
+            Career
+          </a>
+          <a href="#" className="block py-2 text-white">
+            Jobs
+          </a>
+          <a href="#" className="block py-2 text-white">
+            Academy
+          </a>
 
           {/* Services Dropdown for Mobile */}
           <div className="py-2">
@@ -109,7 +151,13 @@ export const Header = () => {
             </button>
             {isServicesOpen && (
               <div className="pl-4">
-                <a href="#" className="block py-2 text-white">Software Solutions</a>
+                <Link
+                  href="/software-services"
+                  className="block py-2 text-white"
+                >
+                  Software Solutions
+                </Link>
+                {/* <a href="#" className="block py-2 text-white">Software Solutions</a> */}
                 <button
                   className="w-full text-left text-white"
                   onClick={() => setIsFacilityOpen(!isFacilityOpen)}
@@ -118,8 +166,20 @@ export const Header = () => {
                 </button>
                 {isFacilityOpen && (
                   <div className="pl-4">
-                    <a href="#" className="block py-2 text-white">Cleaning Services</a>
-                    <a href="#" className="block py-2 text-white">Security Services</a>
+                    <Link
+                      href="/cleaning-services"
+                      className="block py-2 text-white"
+                    >
+                      Cleaning Services
+                    </Link>
+                    <Link
+                      href="/security-services"
+                      className="block py-2 text-white"
+                    >
+                      Security Services
+                    </Link>
+                    {/* <a href="#" className="block py-2 text-white">Cleaning Services</a>
+                    <a href="#" className="block py-2 text-white">Security Services</a> */}
                   </div>
                 )}
               </div>
@@ -130,4 +190,3 @@ export const Header = () => {
     </header>
   );
 };
-
