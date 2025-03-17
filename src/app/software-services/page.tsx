@@ -1,16 +1,14 @@
 "use client";
 
+export const dynamic = "force-dynamic";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
-// import { CardHeader } from "@/components/CardHeader";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
 import softwareAnimation from "@/assets/images/Software.json";
-import securityAnimation from "@/assets/images/Security.json";
-import cleaningAnimation from "@/assets/images/Cleaning.json";
 import Lottie from "lottie-react";
 import { useState, useEffect } from "react";
 

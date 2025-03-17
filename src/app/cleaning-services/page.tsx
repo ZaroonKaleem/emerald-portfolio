@@ -1,8 +1,8 @@
 "use client";
 
+export const dynamic = "force-dynamic";
 import { Header } from "@/sections/Header";
 import { Footer } from "@/sections/Footer";
-// import { CardHeader } from "@/components/CardHeader";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
