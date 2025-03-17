@@ -1,6 +1,8 @@
 "use client";
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
+
+import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import { Header } from "@/sections/Header";
