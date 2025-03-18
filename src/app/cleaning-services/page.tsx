@@ -363,12 +363,12 @@ export default function CleaningServices() {
                     </li>
                   ))}
                 </ul>
-                <a href={project.link}>
+                {/* <a href={project.link}>
                   <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:w-auto md:px-6">
                     <span>Visit Site</span>
                     <ArrowUpRightIcon className="size-4" />
                   </button>
-                </a>
+                </a> */}
               </div>
 
               <div className="relative">
