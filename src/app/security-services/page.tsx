@@ -213,6 +213,15 @@ import { Card } from "@/components/Card";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import securityAnimation from "@/assets/images/Security.json";
 import { motion, AnimatePresence } from "framer-motion";
+import Property from "@/assets/images/property.json";
+import Event from "@/assets/images/event.json";
+import Emergency from "@/assets/images/emergency.json";
+import Reception from "@/assets/images/reception.json";
+import Fire from "@/assets/images/fire.json";
+import Department from "@/assets/images/department.json";
+import Baggage from "@/assets/images/baggage.json";
+import Mall from "@/assets/images/mall.json";
+import c3 from "@/assets/images/c3.json";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -234,7 +243,7 @@ const portfolioProjects: Project[] = [
           { title: "Access Control & Perimeter Protection" },
         ],
       //   animation: propertyProtectionAnimation,
-        animation: securityAnimation,
+        animation: Property,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -246,7 +255,7 @@ const portfolioProjects: Project[] = [
           { title: "Emergency Response Planning" },
         ],
       //   animation: eventProtectionAnimation,
-      animation: securityAnimation,
+      animation: Event,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -258,7 +267,7 @@ const portfolioProjects: Project[] = [
           { title: "Real-Time Surveillance Coordination" },
         ],
       //   animation: emergencyServiceAnimation,
-      animation: securityAnimation,
+      animation: Emergency,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -270,7 +279,7 @@ const portfolioProjects: Project[] = [
           { title: "Lobby & Entrance Surveillance" },
         ],
       //   animation: gatekeeperAnimation,
-      animation: securityAnimation,
+      animation: Reception,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -282,7 +291,7 @@ const portfolioProjects: Project[] = [
           { title: "Emergency Evacuation Planning" },
         ],
       //   animation: fireSafetyAnimation,
-      animation: securityAnimation,
+      animation: Fire,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -294,7 +303,7 @@ const portfolioProjects: Project[] = [
           { title: "Store Safety & Incident Reporting" },
         ],
       //   animation: detectiveAnimation,
-      animation: securityAnimation,
+      animation: Department,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -306,7 +315,7 @@ const portfolioProjects: Project[] = [
           { title: "Security Presence & Patrolling" },
         ],
       //   animation: doormanAnimation,
-      animation: securityAnimation,
+      animation: Baggage,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -318,7 +327,7 @@ const portfolioProjects: Project[] = [
           { title: "Emergency Handling & Response" },
         ],
       //   animation: mallGuardAnimation,
-      animation: securityAnimation,
+      animation: Mall,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
       {
@@ -330,7 +339,7 @@ const portfolioProjects: Project[] = [
           { title: "Intruder Detection & Rapid Response" },
         ],
       //   animation: constructionSecurityAnimation,
-      animation: securityAnimation,
+      animation: c3,
         link: "https://youtu.be/Z7I5uSRHMHg",
       },
     ];
